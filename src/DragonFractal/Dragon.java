@@ -12,7 +12,6 @@ public class Dragon {
 
     private int iterations;
     private ArrayList<Boolean> scale;
-    private long size;
     private DragonVisualizer visualizer;
 
     private void setIterations(int i){
@@ -43,8 +42,6 @@ public class Dragon {
         }
         System.out.println();
     }
-
-
 
     public Dragon() {
         scale = new ArrayList<Boolean>();
