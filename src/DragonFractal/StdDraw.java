@@ -1,6 +1,6 @@
-/*************************************************************************
- *  Compilation:  javac StdDraw.java
- *  Execution:    java StdDraw
+package DragonFractal; /*************************************************************************
+ *  Compilation:  javac DragonFractal.StdDraw.java
+ *  Execution:    java DragonFractal.StdDraw
  *
  *  Standard drawing library. This class provides a basic capability for
  *  creating drawings with your programs. It uses a simple graphics model that

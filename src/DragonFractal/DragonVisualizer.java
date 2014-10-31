@@ -1,3 +1,5 @@
+package DragonFractal;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
@@ -54,8 +56,8 @@ public class DragonVisualizer {
 
     public void visualizeScale(ArrayList<Boolean> scale){
         move(LEFT_ANGLE);
-        for (int i = 0; i < scale.size(); i++) {
-            move(scale.get(i));
+        for (Boolean strafe: scale){
+            move(strafe);
         }
 
     }

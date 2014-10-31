@@ -1,6 +1,6 @@
-import javafx.scene.transform.Rotate;
+package DragonFractal;
 
-import java.awt.*;
+
 import java.awt.geom.Point2D;
 
 /**

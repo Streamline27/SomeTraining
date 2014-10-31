@@ -1,6 +1,7 @@
+package DragonFractal;
+
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Vladislav on 10/31/2014.
