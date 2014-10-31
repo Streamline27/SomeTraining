@@ -13,13 +13,12 @@ public class DragonVisualizer {
     private final double RIGHT_ANGLE_RIGHT = Math.PI/2;
     private final double RIGHT_ANGLE_LEFT = -Math.PI/2;
 
-
     private Vector motionVector;
     private Point2D currentPos;
 
     private double Scale;
 
-
+    /******** Private Helper methods ***********/
     private void InitializeGraphics(int scale, Color color, double penRadius){
         Scale = scale;
         StdDraw.clear();
@@ -45,6 +44,8 @@ public class DragonVisualizer {
         StdDraw.show();
     }
 
+    /******** Public object interface methods **********/
+
     public void setCurrentPos(int X, int Y){
         currentPos.setLocation(X, Y);
     }
@@ -59,7 +60,6 @@ public class DragonVisualizer {
         for (Boolean strafe: scale){
             move(strafe);
         }
-
     }
 
 }
