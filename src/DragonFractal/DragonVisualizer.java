@@ -44,7 +44,7 @@ public class DragonVisualizer {
         StdDraw.show();
     }
 
-    /******** Public object interface methods **********/
+    /******** Public interface methods **********/
 
     public void setCurrentPos(int X, int Y){
         currentPos.setLocation(X, Y);

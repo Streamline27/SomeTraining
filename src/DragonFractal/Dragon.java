@@ -10,13 +10,10 @@ public class Dragon {
     private final boolean RIGHT_ANGLE = true;
     private final boolean LEFT_ANGLE = false;
 
-    private int iterations;
+    private int iterations; //Required for showScale();
     private ArrayList<Boolean> scale;
     private DragonVisualizer visualizer;
 
-    private void setIterations(int i){
-        iterations = i;
-    }
     private void incIteration(){
         iterations++;
     }
@@ -34,6 +31,20 @@ public class Dragon {
         visualizer.setCurrentPos(2850, 1524);
     }
 
+    private void Iterate(int iterations){
+        for (int i = 0; i < iterations; i++) {
+            modify();
+            incIteration();
+        }
+    }
+
+    //======================================
+    /***** Public interface methods  ******/
+
+    public Dragon() {
+        scale = new ArrayList<Boolean>();
+    }
+
     public void showScale(){
         System.out.println("Iteration: " + iterations);
         for (int i = 0; i < scale.size(); i++) {
@@ -43,24 +54,12 @@ public class Dragon {
         System.out.println();
     }
 
-    public Dragon() {
-        scale = new ArrayList<Boolean>();
-    }
-
     public void run(int iterations){
-        setIterations(0);
-        for (int i = 0; i < iterations; i++) {
-            step();
-        }
+        /** Main computation */
+        Iterate(iterations);
+        /** Visualizing results */
         initVisualizer();
         visualizer.visualizeScale(scale);
-
-    }
-
-    public void step(){
-        modify();
-        incIteration();
-        //showScale();
     }
 
     public static void main(String[] args) {
